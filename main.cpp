@@ -5,10 +5,16 @@
 
 int main (){
 
-    cout << "QuickSort" << endl; 
+    int n = rand() % 100 + 1; // Genera un número aleatorio entre 1 y 100
+    vector <int> arr(n); 
 
-    vector<int> arr = {12, 7, 3, 9, 2, 1, 5};
-    int n = arr.size();
+    for (int i = 0; i < n; i++) {
+        arr[i] = rand() % 100 + 1; // Genera un número aleatorio entre 1 y 100
+    }
+
+    cout << "QuickSort" << endl; 
+    //vector<int> arr = {12, 7, 3, 9, 2, 1, 5};
+    //int n = arr.size();
 
     quickSort(arr, 0, n - 1);
 
@@ -19,13 +25,11 @@ int main (){
 
     cout << endl << endl << "BubbleSort" << endl;
 
-    vector<int> arr2 = {64, 34, 25, 12, 22, 11, 90};
-
-    bubbleSort(arr2);
+    bubbleSort(arr);
 
     cout << "Lista ordenada: ";
-    for (int i = 0; i < arr2.size(); i++) {
-        cout << arr2[i] << " ";
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
     }
 
 
